@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.Np1TDORfwIHYEiVI5B80zQHaGI?w=231&h=191&c=7&r=0&o=5&pid=1.7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('PPP.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /*- font-family: تعيين نوع الخط إلى Arial، مع استخدام خط بديل في حال عدم توفره.
+- background-color: تعيين لون الخلفية إلى رمادي فاتح (#f4f4f4).
+- display: استخدام Flexbox لتنسيق العناصر داخل الصفحة.
+- justify-content و align-items: لتوسيط المحتوى عمودياً وأفقياً.
+- height: تعيين ارتفاع الصفحة إلى 100% من ارتفاع نافذة العرض.
+- background-image: استخدام تدرج لوني مع صورة خلفية (PPP.jpg) لتوفير مظهر جذاب.
+- background-size: cover يضمن أن الخلفية تغطي كامل الشاشة.
+- background-position: ضبط الصورة في المركز.
+- background-repeat: يمنع تكرار الصورة.*/
+
+        .signup-container {
+            background-color: rgba(225, 225, 225, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        /*- background-color: تعيين لون الخلفية إلى رمادي فاتح مع شفافية.
+- border-radius: إضافة زوايا دائرية لجعل الحاوية تبدو أكثر نعومة.
+- box-shadow: إضافة ظل لجعل الحاوية تبدو مرتفعة عن الخلفية.
+- padding: إضافة تباعد داخلي حول المحتوى.
+- width: تعيين عرض الحاوية إلى 300 بكسل.
+- text-align: توسيط النص داخل الحاوية.*/
+
+        .signup-container input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /*- width: تعيين عرض حقول الإدخال إلى 90% من عرض الحاوية.
+- padding: إضافة تباعد داخلي.
+- margin: إضافة تباعد خارجي بين الحقول.
+- border: تعيين حدود خفيفة حول الحقول.
+- border-radius: إضافة زوايا دائرية.*/
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background-color:rgb(84, 9, 9);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /*- width: تعيين عرض الزر إلى 100% ليملأ الحاوية.
+- padding: إضافة تباعد داخلي.
+- background-color: تعيين لون الخلفية إلى لون داكن (أحمر غامق).
+- color: تعيين لون النص إلى الأبيض.
+- border: إزالة الحدود الافتراضية.
+- border-radius: إضافة زوايا دائرية للأزرار.
+- cursor: تغيير شكل المؤشر عند المرور فوق الزر.
+- :hover: تغيير لون الخلفية إلى الأسود عند تمرير الفأرة.*/
+        .signup-container button:hover {background-color:black;}
+        .signup-container .login {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>إنشاء حساب جديد</h2>
+        <form id="signup-form">
+            <div class="input-group">
+                <span class="icon">👤</span>
+                <input type="text" id="username" placeholder="اسم المستخدم" required>
+            </div>
+            
+            <div class="input-group">
+                <span class="icon">📧</span>
+                <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            </div>
+            <div class="input-group">
+                <span class="icon">🔒</span>
+                <input type="password" id="password" placeholder="كلمة المرور" required>
+            </div>
+            <button type="submit">تسجيل</button>
+        </form>
+        <div class="login">
+            <button onclick="navigateTo('B4.html')">تسجيل معلومال السائق والسيارة</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع الإرسال الافتراضي للنموذج
+
+            // التحقق من المدخلات
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (username && email && password) {
+                alert("تم إنشاء حسابك بنجاح!"); // رسالة تأكيد
+                // يمكنك هنا تنفيذ الإرسال إلى الخادم أو توجيه المستخدم إلى صفحة أخرى
+                window.location.href = 'B4.html'; // توجيه المستخدم إلى الصفحة المطلوبة
+            } else {
+                alert("يرجى ملء جميع الحقول.");
+            }
+        });
+
+        document.getElementById('login-link').addEventListener('click', function(event) {
+            event.preventDefault(); // منع الرابط من الانتقال
+            alert("سيتم توجيهك إلى صفحة تسجيل الدخول.");
+            // يمكنك استخدام window.location.href لتوجيه المستخدم إلى صفحة تسجيل الدخول
+            // window.location.href = 'login.html'; // استبدل 'login.html' بصفحة تسجيل الدخول الخاصة بك
+        });
+   
+
+
+        function navigateTo(page) {
+            if (confirm("هل أنت متأكد أنك تريد الانتقال إلى الصفحة التالية؟")) {
+                window.location.href = page;
+            }
+        }
+
+        /***addEventListener**: يتم استخدامه للاستماع لحدث event.preventDefault()event.preventDefault()**: يمنع الإرسال الافتراضي للنموذج، مما يسمح بالتحقق من التحقق من المدخلات- **التحقق من المدخلات**: يتم التحقق مما إذا كانت جميalertقد تم ملؤها.
+- **alert**: تظهر رسالة تأكيد عنwindow.location.href**window.location.href**: تستخدم لتوجيه المستخدم إلى الصفحة المطلnavigateToالحساب.
+- **navigateTo**: دالة تستخدم لتأكيد الانتقال إلى صفحة جديدة قبل تنفيذ ذلك.*/
+    </script>
+</body>
+</html>
