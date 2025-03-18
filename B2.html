@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.Np1TDORfwIHYEiVI5B80zQHaGI?w=231&h=191&c=7&r=0&o=5&pid=1.7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  دخول  السائق</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;/*تعيين نوع الخط إلى Arial، مع استخدام خط بديل في حال عدم توفره.*/
+            background-color: #f4f4f4;
+            display: flex;/*لتنسيق العناصر داخل الصفحة.*/
+            justify-content: center;/*لتوسيط المحتوى عمودياً وأفقياً.*/
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image:linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)) , url('ppp.jpg');
+            width: 100%;
+            height: 100vh; 
+            background-size: cover; /* لتغطية كامل الشاشة */
+            background-position: center; /* لتوسيط الصورة */
+            background-repeat: no-repeat; /* عدم تكرار الصورة */
+        }
+        
+        .login-container {
+            background-color:rgba(225, 225, 225, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 10px ;
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(225, 225, 225, 0.5);
+        }
+        /*- background-color: تعيين لون الخلفية إلى رمادي فاتح مع شفافية.
+- border-radius: إضافة زوايا دائرية لجعل الحاوية تبدو أكثر نعومة.
+- box-shadow: إضافة ظل لجعل الحاوية تبدو مرتفعة عن الخلفية.
+- padding: إضافة تباعد داخلي حول المحتوى.
+- margin: تعيين الهامش إلى auto لمركزة الحاوية.
+- width: تعيين عرض الحاوية إلى 300 بكسل*/
+        .login-container h2 {
+            text-align: center;/*توسيط النص في العنوان.*/
+        }
+        .login-container input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px ;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /*- width: تعيين عرض حقول الإدخال إلى 90% من عرض الحاوية.
+- padding: إضافة تباعد داخلي.
+- margin: إضافة تباعد خارجي بين الحقول.
+- border: تعيين حدود خفيفة حول الحقول.
+- border-radius: إضافة زوايا دائرية.*/
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color:rgb(84, 9, 9);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /*- width: تعيين عرض الزر إلى 100% ليملأ الحاوية.
+- padding: إضافة تباعد داخلي.
+- background-color: تعيين لون الخلفية إلى لون داكن (أحمر غامق).
+- color: تعيين لون النص إلى الأبيض.
+- border: إزالة الحدود الافتراضية.
+- border-radius: إضافة زوايا دائرية.
+- cursor: تغيير شكل المؤشر عند المرور فوق الزر.
+- :hover: تغيير لون الخلفية إلى الأسود عند تمرير الفأرة*/
+        .login-container button:hover {background-color: black;}
+
+        .login-container .signup {
+            text-align: center;
+            margin-top: 10px;/*إضافة مسافة فوق القسم*/}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>تسجيل دخول</h2>
+        <form id="login-form">
+            <div class="input-container">
+                <span class="icon">👤</span> 
+                <input type="text" placeholder="اسم المستخدم" required>
+            </div>
+            <div class="input-container">
+                <span class="icon">🔒</span>   
+                <input type="password" placeholder="كلمة المرور" required>
+            </div>
+            <button type="submit"onclick="window.location.href='B3.html'">تسجيل الدخول</button>
+           
+            
+        </form>
+        <div class="signup">
+            <p onclick=" show_message();">لا تملك حساب؟ <a href="B3.html" id="register-link">سجل هنا</a></p >
+          
+        </div>
+    </div>
+
+    <script>
+        function show_message() {
+            alert("سيتم توجيهك إلى صفحة التسجيل.");
+        }
+    </script>
+</body>
+</html>
