@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.Np1TDORfwIHYEiVI5B80zQHaGI?w=231&h=191&c=7&r=0&o=5&pid=1.7">
+    <title>واصل الذكي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;/*تعيين نوع الخط مع توفر خط بديل*/
+            margin: 0;/*لازالة اي تباعد افتراضي */
+            padding: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url('ppp.jpg');
+            width: 100%;/*عرض الصفحة*/
+            height: 100vh;/*ارتفاع الصفحة*/
+            background-size: cover;/*تغطيه الخلفية لكامل الصفحة*/
+            background-position: center;/*ضبط الصورة في المركز*/
+            background-repeat: no-repeat;/*يمنع تكرار الصورة*/
+        }
+        .navbar {
+            position: fixed; /* لجعل شريط التنقل ثابت في الأعلى */
+            top: 0;/*تعين الموقع في الزاويه العليا اليسرى*/
+            left: 0;
+            width: 100%;/*شريط التنقل يغطي كامل العرض*/
+            background-color:black;/**/
+            overflow: hidden;/*يمنع اي تجاوزات*/
+            z-index: 10; /* لضمان أن شريط التنقل فوق كل العناصر الأخرى */
+        }
+
+        .navbar a {
+            float: right;/* يجعل الرابط يظهر في الجانب الايمن*/
+            display: block;/**/
+            color: #f2f2f2;/**/
+            text-align: center;/**/
+            padding: 14px 16px;/*اضافه تباعد حول النص*/
+            text-decoration: none;/*ازاله الخط السفلي من الروابط*/
+        }
+        .navbar a:hover {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);}
+        .logo {
+            float: left;/*يظهر في الجانب الايسر*/
+            padding: 14px 16px;/**/
+            color: white;
+            font-size: 24px;/*تعيين حجم الخط وسمكه*/
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;/*لتنسيق العناصر داخل المحتوى*/
+            flex-direction: column; /*ترتيب العناصر عموديا*/
+            align-items: center; /*توسيط المحتوى عموديا وافقيا*/
+            justify-content: center;    
+            height: 100%;  
+            color: white; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);/*اضافة ضل للنص*/
+            border-radius: 50px;/*اضافه زوايا دائرية*/ }
+
+
+        h1 {
+            font-size: 8em;
+            margin-bottom: 20px;
+            text-align: center; /* توسيط النص */
+            color:beige;
+        }
+
+        p {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center; /* توسيط النص */
+        }
+
+        button {
+            margin: 10px;/*اضافه تباعد حول الازرار*/
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;/* ازاله الحدود الافتراضيه*/
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;/*تغير شكل الماوس*/
+        }
+
+        button:hover {
+            color: #ffffff;
+            background-color:rgb(84, 9, 9); /* لون الخلفية عند التحويم */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">واصل الذكي </div>
+        <a href="B1.html">الرئيسية</a>
+        <a href="B2.html">تسجيل دخول السائق</a>
+        <a href="B6.html">تسجيل دخول الطالب اوالموظف</a>
+        <a href="B5.html">البحث عن السيارات التوصيل</a>
+    </div>
+    <div class="content">
+        <h1>موقع واصل الذكي خط نقل لجامعة كربلاء</h1>
+        <p>الوصف: نقدم خدمة نقل مخصصة للطالب والموظف حيث يوفر لهم وسيلة مريحة وآمنة للوصول الى جامعة كربلاء</p>
+        <p>خدماتنا: توفير مواصلات يومية للطلاب من مختلف المناطق ومواعيد منتظمة لضمان الوصول في الوقت المحدد</p>
+        <button onclick="window.location.href='B2.html'">تسجيل دخول السائق</button>
+        <button onclick="window.location.href='B6.html'">تسجيل دخول الطالب اوالموظف</button>
+    </div>
+</body>
+</html>
